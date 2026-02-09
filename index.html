@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/media.css" />
+
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__logo">
+					<a href="#" class="header__logo-link">pizzashop</a>
+				</div>
+				<div class="header__nav">
+					<nav class="header__menu">
+						<ul class="header-menu__list">
+							<li class="header-menu__item">
+								<a href="index.html" class="header-menu__link">Home</a>
+							</li>
+							<li class="header-menu__item">
+								<a href="#Menu" class="header-menu__link">Menu</a>
+							</li>
+							<li class="header-menu__item">
+								<a href="#Events" class="header-menu__link">Events</a>
+							</li>
+							<li class="header-menu__item">
+								<a href="#About" class="header-menu__link">About us</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header__mobile-menu">
+					<img src="images/icons/line-burger.svg" alt="" class="header__mobile-menu-img" />
+				</div>
+
+				<div class="header__controls">
+					<button class="button button--menu">Log in</button>
+
+					<!-- Korzinka uchun js -->
+					<button class="cart-button" id="cart-button">
+						<img class="cart-button__icon" src="images/icons/header-cart.svg" alt="Cart" />
+						<span class="cart-button__count">0</span>
+					</button>
+
+					<div class="cart-popup" id="cartPopup">
+						<div class="cart-popup__content">
+							<h3 class="cart-popup__title">Your Cart</h3>
+							<div class="cart-items"></div>
+							<div class="cart-total">
+								<span>Total:</span>
+								<span class="total-price">$0</span>
+							</div>
+							<button class="checkout-btn button">Checkout</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="sidebar">
+		<div class="close__icons"><i class="bx bx-x"></i></div>
+
+		<nav class="sidebar__menu">
+			<ul class="sidebar__menu-item">
+				<li class="sidebar__menu-items">
+					<a href="#" class="sidebar__menu-link">Home</a>
+				</li>
+				<li class="sidebar__menu-items">
+					<a href="#" class="sidebar__menu-link">Menu</a>
+				</li>
+				<li class="sidebar__menu-items">
+					<a href="#Events" class="sidebar__menu-link">Events</a>
+				</li>
+				<li class="sidebar__menu-items">
+					<a href="#About" class="sidebar__menu-link">About us</a>
+				</li>
+			</ul>
+		</nav>
+
+		<button class="button sidebar__menu-button">Log in</button>
+	</div>
+	<section class="welcome">
+		<div class="container">
+			<div class="welcome__inner">
+				<div class="welcome__content">
+					<h1 class="welcome__title">
+						The Fastest<br />
+						Pizza<span class="welcome__logo">
+							<img src="images/icons/Lightning.svg" alt="Pizza logo" /> </span>Delivery
+					</h1>
+
+					<p class="welcome__text">
+						We will deliver juicy pizza for your family in 30 minutes, if the
+						courier is late —
+						<span class="welcome__text-highlight">pizza is free!</span>
+					</p>
+
+					<div class="welcome__video">
+						<p class="welcome__video-subtitle">Cooking process:</p>
+						<div class="video-player">
+							<video class="video-player__video" src="images/video/pizza-videaos.mp4"
+								poster="images/img/preview.webp" playsinline webkit-playsinline muted></video>
+							<button class="video-player__play-button" type="button" aria-label="Play video">
+								<img src="images/img/play.png" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="welcome__button">
+						<label class="toggle-button">
+							<input type="checkbox" id="pizza-menu" class="toggle-button__input" checked />
+							<span class="toggle-button__switch">
+								<span class="toggle-button__label toggle-button__label--left">To order</span>
+								<span class="toggle-button__label toggle-button__label--right">Pizza-Menu</span>
+							</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="welcome__images">
+					<img src="images/img/welcome-banner.webp" alt="Delicious pizza on a table" class="welcome__image" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="menu" id="Menu">
+		<div class="container">
+			<h1 class="menu__title">Menu</h1>
+			<div class="menu__tabs-btn">
+				<div class="tab">
+					<button class="menu__tablinks" data-tab="all">Show All</button>
+					<button class="menu__tablinks" data-tab="meat">Meat</button>
+					<button class="menu__tablinks" data-tab="vegetarian">
+						Vegetarian
+					</button>
+					<button class="menu__tablinks" data-tab="sea">Sea products</button>
+					<button class="menu__tablinks" data-tab="mushroom">Mushroom</button>
+				</div>
+			</div>
+			<div class="menu__inner">
+				<div class="menu__tabcontent" data-category="all meat">
+					<div class="menu__box">
+						<img src="images/img/pizza/Italian.webp" alt="Italian" class="menu__img" />
+						<div class="menu__box-wrapper">
+							<div class="menu__box-content">
+								<h3 class="menu__box-title">Italian</h3>
+								<p class="menu__box-text">
+									Filling: onion, potato, tomato, mushrooms, cheese, olives,
+									meat...
+								</p>
+							</div>
+
+							<div class="menu__box-size">
+								<fieldset class="pizza-sizes">
+									<input type="radio" id="size-22" name="pizza-size-1" value="22" />
+									<label for="size-22">22</label>
+
+									<input type="radio" id="size-28" name="pizza-size-1" value="28" checked />
+									<label for="size-28">28</label>
+
+									<input type="radio" id="size-33" name="pizza-size-1" value="33" />
+									<label for="size-33">33</label>
+								</fieldset>
+							</div>
+							<button class="menu__box-ingredients"
+								data-ingredients="onion, potato, tomato, mushrooms, cheese, olives, meat">
+								+ Ingredients
+							</button>
+							<div class="menu__box-prise">
+								<div class="menu__price-total">
+									<span class="menu__price-value">8.35</span>
+									<span class="menu__price-currency">$</span>
+								</div>
+
+								<div class="quantity-control">
+									<button class="quantity-btn minus">–</button>
+									<input type="number" class="quantity-input" value="1" min="1" readonly />
+									<button class="quantity-btn plus">+</button>
+								</div>
+							</div>
+							<button class="menu__box-btn">Order Now</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__tabcontent" data-category="all sea">
+					<div class="menu__box">
+						<img src="images/img/pizza/Venecia.webp" alt="Italian" class="menu__img" />
+						<div class="menu__box-wrapper">
+							<div class="menu__box-content">
+								<h3 class="menu__box-title">Venecia</h3>
+								<p class="menu__box-text">
+									Filling: pepperoni, cheese, tomato sauce, basil
+								</p>
+							</div>
+
+							<div class="menu__box-size">
+								<fieldset class="pizza-sizes">
+									<input type="radio" id="size-22" name="pizza-size-2" value="22" />
+									<label for="size-22">22</label>
+
+									<input type="radio" id="size-28" name="pizza-size-2" value="28" checked />
+									<label for="size-28">28</label>
+
+									<input type="radio" id="size-33" name="pizza-size-2" value="33" />
+									<label for="size-33">33</label>
+								</fieldset>
+							</div>
+							<button class="menu__box-ingredients"
+								data-ingredients="pepperoni, cheese, tomato sauce, basil">
+								+ Ingredients
+							</button>
+							<div class="menu__box-prise">
+								<div class="menu__price-total">
+									<span class="menu__price-value">7.35</span>
+									<span class="menu__price-currency">$</span>
+								</div>
+
+								<div class="quantity-control">
+									<button class="quantity-btn minus">–</button>
+									<input type="number" class="quantity-input" value="1" min="1" readonly />
+									<button class="quantity-btn plus">+</button>
+								</div>
+							</div>
+							<button class="menu__box-btn">Order Now</button>
+						</div>
+					</div>
+				</div>
+				<div class="menu__tabcontent" data-category="all meat">
+					<div class="menu__box">
+						<img src="images/img/pizza/Meat.webp" alt="Italian" class="menu__img" />
+						<div class="menu__box-wrapper">
+							<div class="menu__box-content">
+								<h3 class="menu__box-title">Meat</h3>
+								<p class="menu__box-text">
+									Filling: pepperoni, cheese, tomato sauce, basil
+								</p>
+							</div>
+
+							<div class="menu__box-size">
+								<fieldset class="pizza-sizes">
+									<input type="radio" id="size-22" name="pizza-size-3" value="22" />
+									<label for="size-22">22</label>
+
+									<input type="radio" id="size-28" name="pizza-size-3" value="28" checked />
+									<label for="size-28">28</label>
+
+									<input type="radio" id="size-33" name="pizza-size-3" value="33" />
+									<label for="size-33">33</label>
+								</fieldset>
+							</div>
+							<button class="menu__box-ingredients"
+								data-ingredients="pepperoni, cheese, tomato sauce, basil">
+								+ Ingredients
+							</button>
+							<div class="menu__box-prise">
+								<div class="menu__price-total">
+									<span class="menu__price-value">9.35</span>
+									<span class="menu__price-currency">$</span>
+								</div>
+
+								<div class="quantity-control">
+									<button class="quantity-btn minus">–</button>
+									<input type="number" class="quantity-input" value="1" min="1" readonly />
+									<button class="quantity-btn plus">+</button>
+								</div>
+							</div>
+							<button class="menu__box-btn">Order Now</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__tabcontent" data-category="all vegetarian">
+					<div class="menu__box">
+						<img src="images/img/pizza/Cheese.webp" alt="Italian" class="menu__img" />
+						<div class="menu__box-wrapper">
+							<div class="menu__box-content">
+								<h3 class="menu__box-title">Cheese</h3>
+								<p class="menu__box-text">
+									Filling: tomato, mozzarella, fresh basil, olive oil
+								</p>
+							</div>
+
+							<div class="menu__box-size">
+								<fieldset class="pizza-sizes">
+									<input type="radio" id="size-22" name="pizza-size-4" value="22" />
+									<label for="size-22">22</label>
+
+									<input type="radio" id="size-28" name="pizza-size-4" value="28" checked />
+									<label for="size-28">28</label>
+
+									<input type="radio" id="size-33" name="pizza-size-4" value="33" />
+									<label for="size-33">33</label>
+								</fieldset>
+							</div>
+							<button class="menu__box-ingredients"
+								data-ingredients="tomato, mozzarella, fresh basil, olive oil">
+								+ Ingredients
+							</button>
+							<div class="menu__box-prise">
+								<div class="menu__price-total">
+									<span class="menu__price-value">8.35</span>
+									<span class="menu__price-currency">$</span>
+								</div>
+
+								<div class="quantity-control">
+									<button class="quantity-btn minus">–</button>
+									<input type="number" class="quantity-input" value="1" min="1" readonly />
+									<button class="quantity-btn plus">+</button>
+								</div>
+							</div>
+							<button class="menu__box-btn">Order Now</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="menu__banner">
+				<img class="menu__banner-img" src="images/img/banner__pizza-menu.webp" alt="" />
+				<h4 class="menu__banner-title">MOST POPULAR PIZZA</h4>
+			</div>
+			<div class="menu__inner">
+				<div class="menu__tabcontent" data-category="all ">
+					<div class="menu__box">
+						<img src="images/img/pizza/Argentina.webp" alt="Italian" class="menu__img" />
+						<div class="menu__box-wrapper">
+							<div class="menu__box-content">
+								<h3 class="menu__box-title">Argentina</h3>
+								<p class="menu__box-text pizza__filling">
+									Filling: tomato sauce, mozzarella cheese, spicy chorizo, red
+									onion, green bell pepper, oregano, black olives, and a touch
+									of smoked paprika.
+								</p>
+							</div>
+
+							<div class="menu__box-size">
+								<fieldset class="pizza-sizes">
+									<input type="radio" id="size-22" name="pizza-size-5" value="22" />
+									<label for="size-22">22</label>
+
+									<input type="radio" id="size-28" name="pizza-size-5" value="28" checked />
+									<label for="size-28">28</label>
+
+									<input type="radio" id="size-33" name="pizza-size-5" value="33" />
+									<label for="size-33">33</label>
+								</fieldset>
+							</div>
+							<button class="menu__box-ingredients"
+								data-ingredients="tomato sauce, mozzarella cheese, spicy chorizo, red onion, green bell pepper, oregano, black olives, and a touch of smoked paprika.">
+								+ Ingredients
+							</button>
+							<div class="menu__box-prise">
+								<div class="menu__price-total">
+									<span class="menu__price-value">7.35</span>
+									<span class="menu__price-currency">$</span>
+								</div>
+
+								<div class="quantity-control">
+									<button class="quantity-btn minus">–</button>
+									<input type="number" class="quantity-input" value="1" min="1" readonly />
+									<button class="quantity-btn plus">+</button>
+								</div>
+							</div>
+							<button class="menu__box-btn">Order Now</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__tabcontent" data-category="all ">
+					<div class="menu__box">
+						<img src="images/img/pizza/Gribnaya.webp" alt="Italian" class="menu__img" />
+						<div class="menu__box-wrapper">
+							<div class="menu__box-content">
+								<h3 class="menu__box-title">Gribnaya</h3>
+								<p class="menu__box-text pizza__filling">
+									Filling: tomato sauce, mozzarella cheese, mushrooms, onion,
+									cream sauce, parsley, and a touch of garlic.
+								</p>
+							</div>
+
+							<div class="menu__box-size">
+								<fieldset class="pizza-sizes">
+									<input type="radio" id="size-22" name="pizza-size-6" value="22" />
+									<label for="size-22">22</label>
+
+									<input type="radio" id="size-28" name="pizza-size-6" value="28" checked />
+									<label for="size-28">28</label>
+
+									<input type="radio" id="size-33" name="pizza-size-6" value="33" />
+									<label for="size-33">33</label>
+								</fieldset>
+							</div>
+							<button class="menu__box-ingredients"
+								data-ingredients="tomato sauce, mozzarella cheese, mushrooms, onion, cream sauce, parsley, and a touch of garlic.">
+								+ Ingredients
+							</button>
+							<div class="menu__box-prise">
+								<div class="menu__price-total">
+									<span class="menu__price-value">6.35</span>
+									<span class="menu__price-currency">$</span>
+								</div>
+
+								<div class="quantity-control">
+									<button class="quantity-btn minus">–</button>
+									<input type="number" class="quantity-input" value="1" min="1" readonly />
+									<button class="quantity-btn plus">+</button>
+								</div>
+							</div>
+							<button class="menu__box-btn">Order Now</button>
+						</div>
+					</div>
+				</div>
+				<div class="menu__tabcontent" data-category="all ">
+					<div class="menu__box">
+						<img src="images/img/pizza/Tomato.webp" alt="Italian" class="menu__img" />
+						<div class="menu__box-wrapper">
+							<div class="menu__box-content">
+								<h3 class="menu__box-title">Tomato</h3>
+								<p class="menu__box-text pizza__filling">
+									Filling: tomato sauce, fresh tomatoes, mozzarella cheese,
+									basil, olive oil, and oregano.
+								</p>
+							</div>
+
+							<div class="menu__box-size">
+								<fieldset class="pizza-sizes">
+									<input type="radio" id="size-22" name="pizza-size-7" value="22" />
+									<label for="size-22">22</label>
+
+									<input type="radio" id="size-28" name="pizza-size-7" value="28" checked />
+									<label for="size-28">28</label>
+
+									<input type="radio" id="size-33" name="pizza-size-7" value="33" />
+									<label for="size-33">33</label>
+								</fieldset>
+							</div>
+							<button class="menu__box-ingredients"
+								data-ingredients="tomato sauce, fresh tomatoes, mozzarella cheese, basil, olive oil, and oregano.">
+								+ Ingredients
+							</button>
+							<div class="menu__box-prise">
+								<div class="menu__price-total">
+									<span class="menu__price-value">7.35</span>
+									<span class="menu__price-currency">$</span>
+								</div>
+
+								<div class="quantity-control">
+									<button class="quantity-btn minus">–</button>
+									<input type="number" class="quantity-input" value="1" min="1" readonly />
+									<button class="quantity-btn plus">+</button>
+								</div>
+							</div>
+							<button class="menu__box-btn">Order Now</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__tabcontent" data-category="all ">
+					<div class="menu__box">
+						<img src="images/img/pizza/Italian_x2.webp" alt="Italian" class="menu__img" />
+						<div class="menu__box-wrapper">
+							<div class="menu__box-content">
+								<h3 class="menu__box-title">Italian x2</h3>
+								<p class="menu__box-text pizza__filling">
+									Filling: tomato sauce, fresh tomatoes, mozzarella cheese,
+									basil, olive oil, and oregano.
+								</p>
+							</div>
+
+							<div class="menu__box-size">
+								<fieldset class="pizza-sizes">
+									<input type="radio" id="size-22" name="pizza-size-8" value="22" />
+									<label for="size-22">22</label>
+
+									<input type="radio" id="size-28" name="pizza-size-8" value="28" checked />
+									<label for="size-28">28</label>
+
+									<input type="radio" id="size-33" name="pizza-size-8" value="33" />
+									<label for="size-33">33</label>
+								</fieldset>
+							</div>
+							<button class="menu__box-ingredients"
+								data-ingredients="tomato sauce, fresh tomatoes, mozzarella cheese, basil, olive oil, and oregano.">
+								+ Ingredients
+							</button>
+							<div class="menu__box-prise">
+								<!-- Итоговая цена -->
+								<div class="menu__price-total">
+									<span class="menu__price-value">8.35</span>
+									<span class="menu__price-currency">$</span>
+								</div>
+
+								<div class="quantity-control">
+									<button class="quantity-btn minus">–</button>
+									<input type="number" class="quantity-input" value="1" min="1" readonly />
+									<button class="quantity-btn plus">+</button>
+								</div>
+							</div>
+							<button class="menu__box-btn">Order Now</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="ingredients-modal" id="ingredientsModal">
+		<div class="ingredients-modal__content">
+			<button class="ingredients-modal__close" aria-label="Close">
+				&times;
+			</button>
+
+			<h3 class="ingredients-modal__title">Ingredients</h3>
+
+			<div class="ingredients-modal__current">
+				<p class="ingredients-modal__label">Current:</p>
+				<p class="ingredients-modal__list">
+					onion, potato, tomato, mushrooms, cheese, olives, meat
+				</p>
+			</div>
+
+			<div class="ingredients-modal__add">
+				<p class="ingredients-modal__label">Add more:</p>
+				<div class="ingredients-modal__options">
+					<label class="ingredients-modal__option">
+						<input type="checkbox" name="extra" value="pepperoni" />
+						<span>Pepperoni</span>
+					</label>
+					<label class="ingredients-modal__option">
+						<input type="checkbox" name="extra" value="bacon" />
+						<span>Bacon</span>
+					</label>
+					<label class="ingredients-modal__option">
+						<input type="checkbox" name="extra" value="corn" />
+						<span>Corn</span>
+					</label>
+					<label class="ingredients-modal__option">
+						<input type="checkbox" name="extra" value="pineapple" />
+						<span>Pineapple</span>
+					</label>
+				</div>
+			</div>
+
+			<button class="ingredients-modal__apply button">Apply</button>
+		</div>
+	</div>
+	<div class="modal-overlay" id="modalOverlay"></div>
+
+	<section class="events" id="Events">
+		<div class="container">
+			<div class="events__inner">
+				<div class="events__block1">
+					<div class="events-card events-card--cooking event__decor1" style="grid-area: card1">
+						<img src="images/img/events/eve-1.webp" alt="How we cooking" class="events-card__img" />
+						<h4 class="events-card__title">HOW WE COOKING</h4>
+						<button class="events-card__btn button">More</button>
+					</div>
+					<div class="events-card events-card--blog" style="grid-area: card2">
+						<img src="images/img/events/eve-2.webp" alt="Our blog" class="events-card__img" />
+						<h4 class="events-card__title">OUR BLOG</h4>
+						<button class="events-card__btn button">More</button>
+					</div>
+					<div class="events__card-content" style="grid-area: content">
+						<h2 class="events__card-content-title">Events</h2>
+						<p class="events__card-content-text">
+							There are regular events in our pizzeria that will allow you to
+							eat delicious food for a lower price!
+						</p>
+					</div>
+				</div>
+
+				<div class="events__block2">
+					<div class="events-card events-card--two-pizza" style="grid-area: card3">
+						<img src="images/img/events/eve-3.webp" alt="Two pizza for 1 price" class="events-card__img" />
+						<h4 class="events-card__title">TWO PIZZA FOR 1 PRICE</h4>
+						<button class="events-card__btn button">More</button>
+					</div>
+					<div class="events-card events-card--kitchen-tour event__decor2" style="grid-area: card4">
+						<img src="images/img/events/eve-4.webp" alt="Kitchen tour" class="events-card__img" />
+						<h4 class="events-card__title">KITCHEN TOUR</h4>
+						<button class="events-card__btn button">More</button>
+					</div>
+				</div>
+
+				<div class="events__block3">
+					<div class="events-card events-card--coffee event__decor3" style="grid-area: card5">
+						<img src="images/img/events/eve-5.webp" alt="Free coffee" class="events-card__img" />
+						<h4 class="events-card__title">FREE COFFEE FOR 3 PIZZA</h4>
+						<button class="events-card__btn button">More</button>
+					</div>
+					<div class="events-card events-card--instagram" style="grid-area: card6">
+						<img src="images/img/events/eve-6.webp" alt="Our Instagram" class="events-card__img" />
+						<h4 class="events-card__title">OUR INSTAGRAM</h4>
+						<button class="events-card__btn button">More</button>
+					</div>
+					<div class="events-card events-card--where" style="grid-area: card7">
+						<img src="images/img/events/eve-7.webp" alt="Where are you choose us?"
+							class="events-card__img" />
+						<h4 class="events-card__title">WHERE ARE YOU CHOOSE US?</h4>
+						<button class="events-card__btn button">More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about" id="About">
+		<div class="container">
+			<div class="about__inner">
+				<div class="about__content">
+					<h2 class="about__title">About us</h2>
+					<p class="about__text">
+						In just a couple of years, we have opened 6 outlets in different
+						cities: Kazan, Chelyabinsk, Ufa, Samara, Izhevsk, and in the
+						future we plan to develop the network in other major cities of
+						Russia.
+					</p>
+					<div class="about__img-box">
+						<img src="images/img/pizzy.webp" alt="" />
+					</div>
+					<p class="about__text">
+						The kitchen of each point is at least: 400-500 sq. m. meters,
+						hundreds of employees, smoothly performing work in order to
+						receive / prepare / form / deliver customer orders on time.
+					</p>
+				</div>
+				<div class="about__img">
+					<img src="images/img/about-pizza.webp" alt="" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__top">
+					<div class="footer__top-items">
+						<a href="#" class="footer__top-logo logo">pizzashop</a>
+					</div>
+					<div class="footer__top-items">
+						<h4 class="footer__top-title">Home</h4>
+						<a class="footer__top-link">To Order</a>
+						<a class="footer__top-link">About us</a>
+						<a class="footer__top-link">Events</a>
+						<a class="footer__top-link">Menu</a>
+					</div>
+					<div class="footer__top-items">
+						<h4 class="footer__top-title">Events</h4>
+						<a class="footer__top-link">3 Pizza 1 Free Coffee</a>
+						<a class="footer__top-link">2 Pizza for 1 Price</a>
+						<a class="footer__top-link">Kitchen Tour</a>
+					</div>
+					<div class="footer__top-items">
+						<h4 class="footer__top-title">Menu</h4>
+						<a class="footer__top-link">Show All</a>
+						<a class="footer__top-link">Seaproducts</a>
+						<a class="footer__top-link">Vegan</a>
+						<a class="footer__top-link">Meat</a>
+					</div>
+					<div class="footer__top-items">
+						<h4 class="footer__top-title">About Us</h4>
+						<a class="footer__top-link">Our History</a>
+						<a class="footer__top-link">Why We?</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__bottom-tel">
+						<a href="tel:+79373335533" class="footer__bottom-tel-link">+7 (937) 333-55-33</a>
+					</div>
+					<div class="footer__bottom-social">
+						<a href="#" class="footer__bottom-social-link">
+							<img src="images/icons/" alt="" />
+						</a>
+						<a href="#" class="footer__bottom-social-link">
+							<img src="images/icons/" alt="" />
+						</a>
+						<a href="#" class="footer__bottom-social-link">
+							<img src="images/icons/" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.js" defer></script>
+
+</body>
+
+</html>
